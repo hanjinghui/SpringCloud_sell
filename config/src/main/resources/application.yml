@@ -1,0 +1,22 @@
+#config不注册到eureka,最先启动config
+server:
+  port: 8070
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/jiangli31346337/tensquare
+          username: jiangli31346337
+          password: 1dCYpsz1/2Jss1/2J#f00
+          basedir: G:/Projects/sell/basedir  #将配置文件拉取到该文件夹
+  rabbitmq:
+    host: 192.168.136.130
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
